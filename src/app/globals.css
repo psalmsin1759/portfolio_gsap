@@ -9,6 +9,13 @@
   --color-card: #1F1F1F;
 }
 
+@layer utilities {
+  .shadow-bottom-right-primary {
+    box-shadow: 2px 2px 0 var(--tw-shadow-color);
+    --tw-shadow-color: theme(colors.primary);
+  }
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -45,4 +52,5 @@ a:hover {
   margin-right: 40px;
   padding: 20px;
 }
+
 

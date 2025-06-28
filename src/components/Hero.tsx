@@ -154,8 +154,8 @@ export default function Hero() {
       </div>
 
       <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative h-[300px] md:h-auto">
-        <div ref={profileImageRef} className="relative w-fit">
-          <div className="flex justify-center items-center">
+        <div  className="relative w-fit">
+          <div className="flex justify-center items-center" ref={profileImageRef}>
             <Image
               src="/assets/images/profile.png"
               alt="Samson"
