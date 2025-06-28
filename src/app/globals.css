@@ -15,10 +15,7 @@ body {
   font-family: "Inter", "Poppins", Arial, Helvetica, sans-serif;
 }
 
-/* Example element styles using the theme colors */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-primary);
-}
+
 
 a {
   color: var(--color-primary);
