@@ -11,6 +11,7 @@ const bannerValues = [
   { num: "100+", text: "Satisfied Customers" },
 ];
 
+
 export default function Banner() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -45,9 +46,9 @@ export default function Banner() {
   return (
     <div
       ref={containerRef}
-      className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16"
     >
-      <div className="left-column bg-card p-8 flex flex-col gap-8 rounded-2xl m-4 transition-all duration-300 hover:shadow-[2px_2px_0px_var(--tw-shadow-color)] hover:shadow-primary">
+      <div className="left-column bg-card p-8 flex flex-col gap-8 rounded-2xl  transition-all duration-300 hover:shadow-[2px_2px_0px_var(--tw-shadow-color)] hover:shadow-primary">
         <div className="flex gap-4 items-center">
           <span className="text-primary text-9xl font-bold">10</span>
           <span className="text-2xl text-white">Year Of Experience</span>
@@ -58,7 +59,7 @@ export default function Banner() {
         </p>
       </div>
 
-      <div className="right-column grid grid-cols-1 md:grid-cols-2 gap-4 m-4">
+      <div className="right-column grid grid-cols-1 md:grid-cols-2 gap-4 ">
         {bannerValues.map((item, index) => (
           <div
             key={index}

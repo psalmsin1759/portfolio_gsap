@@ -55,7 +55,7 @@ export default function SkillsBanner() {
   );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
       <div className="flex flex-col gap-6">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           Developer Skills
@@ -64,8 +64,11 @@ export default function SkillsBanner() {
           Here’s a quick glance at the technologies and tools I’m most
           comfortable with.
         </p>
+        <div>
+          
+        </div>
         {devSkills.map((skill, index) => (
-          <div key={index}>
+          <div key={index} >
             <div className="flex justify-between mb-1">
               <span className="text-gray-100 font-medium">{skill.title}</span>
               <span className="text-gray-300 text-sm">{skill.percent}%</span>
