@@ -14,11 +14,11 @@ export default function Header() {
   };
 
   return (
-    <div className="w-full  ">
+    <div className="w-full  px-2 md:px-16 py-2 md:py-4">
       <MenuLayout toggle={toggle} isMenuOpen={isMenuOpen} />
       <div className="px-8 py-8">
         <div className="flex justify-between items-center">
-          <Link href={"/"} className="text-primary text-2xl font-bold">SamsonUde</Link>
+          <Link href={"/"} className="text-primary text-2xl md:text-3xl font-bold">Samson Ude</Link>
           <div className="hidden md:block">
             <ul className="flex items-center gap-7">
               {menus.map((menu, index) => (
