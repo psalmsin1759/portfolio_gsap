@@ -5,6 +5,7 @@ import { HiOutlineArrowTopRightOnSquare } from "react-icons/hi2";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
   const titles = [
@@ -21,6 +22,11 @@ export default function Hero() {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const profileImageRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
+  const moveToProjects = () => {
+    router.push("/projects")
+  }
 
   const skillRefs = useRef<HTMLDivElement[]>([]);
 
@@ -138,24 +144,29 @@ export default function Hero() {
           ref={paragraphRef}
           className="text-gray-300 text-base md:text-lg leading-relaxed"
         >
-          I&apos;m a software engineer who loves building cool stuff — whether it&apos;s a
-          clean UI with React/Next.js/Vue, a solid backend with Node.js
-          (Express) / PHP (Laravel), or a mobile app in Flutter. 
-          I&apos;m well-versed in containerization using Docker and experienced in implementing CI/CD pipelines with Github Action.
-          I&apos;m all about solving problems, learning fast, and making tech that works smoothly
+          I&apos;m a software engineer who loves building cool stuff — whether
+          it&apos;s a clean UI with React/Next.js/Vue, a solid backend with
+          Node.js (Express) / PHP (Laravel), or a mobile app in Flutter.
+          I&apos;m well-versed in containerization using Docker and experienced
+          in implementing CI/CD pipelines with Github Action. I&apos;m all about
+          solving problems, learning fast, and making tech that works smoothly
           and looks great.
         </p>
         <button
           ref={buttonRef}
-          className="mt-4 flex gap-2 items-center hover:bg-card hover:text-white bg-primary text-charcoal font-semibold px-6 py-3 rounded hover:bg-opacity-80 transition-colors"
+          onClick={moveToProjects}
+          className="mt-4 flex gap-2 items-center hover:bg-card hover:text-white bg-primary text-charcoal font-semibold px-6 py-3 rounded hover:bg-opacity-80 transition-colors cursor-pointer"
         >
           View Projects <HiOutlineArrowTopRightOnSquare />
         </button>
       </div>
 
       <div className="w-full md:w-1/2 flex flex-col items-center justify-center relative h-[300px] md:h-auto">
-        <div  className="relative w-fit">
-          <div className="flex justify-center items-center" ref={profileImageRef}>
+        <div className="relative w-fit">
+          <div
+            className="flex justify-center items-center"
+            ref={profileImageRef}
+          >
             <Image
               src="/assets/images/profile.png"
               alt="Samson"
