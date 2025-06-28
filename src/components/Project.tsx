@@ -8,7 +8,11 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Project() {
+interface ProjectProps {
+  title: string;
+}
+
+export default function Project({title}: ProjectProps) {
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   // Animate cards on scroll
@@ -31,7 +35,7 @@ export default function Project() {
 
   return (
     <div className="flex flex-col gap-10 mt-16 justify-center items-center">
-      <h1 className="text-2xl text-primary">Latest Portfolio</h1>
+      <h1 className="text-2xl text-primary">{title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {productsData.map((product, index) => (
           <div

@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <Banner />
       <SkillsBanner />
-      <Project />
+      <Project title="Latest Projects" />
     </div>
   );
 }
