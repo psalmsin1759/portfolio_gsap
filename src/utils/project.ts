@@ -38,7 +38,7 @@ export const productsData : Product [] = [
         category: "Edutech",
         description: "CareerHaven is a comprehensive Learning Management System (LMS) designed to empower students in their educational journey and career development. With a user-friendly interface and robust features, CareerHaven offers a seamless experience for students to purchase courses, enroll in bootcamps, explore job opportunities, and showcase their profiles to potential recruiters. .",
         stack: "Laravel, Nextjs, Typescript, MySQL",
-        url: "https://careerhaven.com",
+        url: "https://careerhaven.ca",
         image: "/assets/images/projects/careerhaven.png"
     },
      {
